@@ -1,0 +1,34 @@
+{
+    "name": "blue32a/monolog-azure-blob",
+    "description": "Azure Blob Storage Handler for Monolog",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "blue32a",
+            "email": "blue32a.jp@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.2",
+        "monolog/monolog": "^1.25",
+        "microsoft/azure-storage-blob": "^1.5"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8.5",
+        "mockery/mockery": "^1.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Blue32a\\Monolog\\Handler\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit"
+    }
+}
