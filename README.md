@@ -9,7 +9,7 @@ Azure Blob Storage Handler for [Monolog](https://github.com/Seldaek/monolog).
 ## Installation
 
 ```console
-$ composer require blue32a/laravel-azure-blob-storage
+$ composer require blue32a/monolog-azure-blob
 ```
 
 ## Usage
