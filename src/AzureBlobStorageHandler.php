@@ -45,7 +45,7 @@ class AzureBlobStorageHandler extends AbstractProcessingHandler
     /**
      * {@inheritdoc}
      */
-    protected function write(array $record)
+    protected function write(array $record): void
     {
         $this->client->appendBlock($this->container, $this->blob, $record['formatted']);
     }
