@@ -11,7 +11,7 @@
     ],
     "require": {
         "php": "^7.2",
-        "monolog/monolog": "^1.25",
+        "monolog/monolog": ">=1.25 <=2.1",
         "microsoft/azure-storage-blob": "^1.5"
     },
     "require-dev": {
