@@ -10,7 +10,7 @@ use Mockery;
 use Mockery\Adapter\Phpunit\MockeryPHPUnitIntegration;
 use PHPUnit\Framework\TestCase;
 
-class AzureBlobStorageTest extends TestCase
+class AzureBlobStorageHandlerTest extends TestCase
 {
     use MockeryPHPUnitIntegration;
 
@@ -53,13 +53,14 @@ class AzureBlobStorageTest extends TestCase
     public function testConstruct()
     {
         $clientMock = $this->createBlobRestProxyMock();
-        $container = 'example';
-        $blob = 'test.log';
+        $container  = 'example';
+        $blob       = 'test.log';
 
         $targetMock = $this->createTargetMock()
             ->makePartial();
 
         $targetRef = $this->createTargetReflection();
+
         $targetConstructorRef = $targetRef->getConstructor();
         $targetConstructorRef->invoke($targetMock, $clientMock, $container, $blob);
 
@@ -85,7 +86,7 @@ class AzureBlobStorageTest extends TestCase
     public function testWrite()
     {
         $container = 'example';
-        $blob = 'test.log';
+        $blob      = 'test.log';
         $formatted = 'formatted';
 
         $clientMock = $this->createBlobRestProxyMock();
@@ -99,6 +100,7 @@ class AzureBlobStorageTest extends TestCase
             ->shouldAllowMockingProtectedMethods();
 
         $targetRef = $this->createTargetReflection();
+
         $clientPropertyRef = $targetRef->getProperty('client');
         $clientPropertyRef->setAccessible(true);
         $clientPropertyRef->setValue($targetMock, $clientMock);
