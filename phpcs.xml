@@ -12,6 +12,6 @@
     <arg value="sp"/>
 
     <!-- rule -->
-    <rule ref="PSR12"/>
+    <rule ref="Blue32a"/>
 
 </ruleset>
