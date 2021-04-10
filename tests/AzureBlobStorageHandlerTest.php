@@ -15,8 +15,6 @@ class AzureBlobStorageHandlerTest extends TestCase
     use MockeryPHPUnitIntegration;
 
     /**
-     * Create target mock
-     *
      * @return \Mockery\MockInterface|\Mockery\LegacyMockInterface
      */
     protected function createTargetMock()
@@ -25,8 +23,6 @@ class AzureBlobStorageHandlerTest extends TestCase
     }
 
     /**
-     * Create target reflection
-     *
      * @return \ReflectionClass
      */
     protected function createTargetReflection()
@@ -35,8 +31,6 @@ class AzureBlobStorageHandlerTest extends TestCase
     }
 
     /**
-     * Create BlobRestProxy mock
-     *
      * @return \Mockery\MockInterface|\Mockery\LegacyMockInterface
      */
     protected function createBlobRestProxyMock()
@@ -45,12 +39,9 @@ class AzureBlobStorageHandlerTest extends TestCase
     }
 
     /**
-     * test construct
-     *
      * @test
-     * @return void
      */
-    public function testConstruct()
+    public function testConstruct(): void
     {
         $clientMock = $this->createBlobRestProxyMock();
         $container  = 'example';
@@ -78,12 +69,9 @@ class AzureBlobStorageHandlerTest extends TestCase
     }
 
     /**
-     * test write
-     *
      * @test
-     * @return void
      */
-    public function testWrite()
+    public function testWrite(): void
     {
         $container = 'example';
         $blob      = 'test.log';
