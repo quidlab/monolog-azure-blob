@@ -20,20 +20,14 @@ class AzureBlobStorageHandler extends AbstractProcessingHandler
     protected $blob;
 
     /**
-     * construct
-     *
-     * @param BlobRestProxy $client
-     * @param string        $container
-     * @param string        $blob
-     * @param int|string    $level
-     * @param boolean       $bubble
+     * @param int|string $level
      */
     public function __construct(
         BlobRestProxy $client,
         string $container,
         string $blob,
         $level = Logger::DEBUG,
-        $bubble = true
+        bool $bubble = true
     ) {
         $this->client    = $client;
         $this->container = $container;

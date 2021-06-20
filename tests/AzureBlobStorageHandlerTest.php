@@ -18,23 +18,20 @@ class AzureBlobStorageHandlerTest extends TestCase
     use MockeryPHPUnitIntegration;
 
     /**
-     * @return MockInterface|LegacyMockInterface
+     * @return MockInterface&LegacyMockInterface&AzureBlobStorageHandler
      */
     protected function createTargetMock()
     {
         return Mockery::mock(AzureBlobStorageHandler::class);
     }
 
-    /**
-     * @return ReflectionClass
-     */
-    protected function createTargetReflection()
+    protected function createTargetReflection(): ReflectionClass
     {
         return new ReflectionClass(AzureBlobStorageHandler::class);
     }
 
     /**
-     * @return MockInterface|LegacyMockInterface
+     * @return MockInterface&LegacyMockInterface&BlobRestProxy
      */
     protected function createBlobRestProxyMock()
     {
