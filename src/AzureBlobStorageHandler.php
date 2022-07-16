@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Blue32a\Monolog\Handler;
+namespace Quidlab\Monolog\Handler;
 
 use MicrosoftAzure\Storage\Blob\BlobRestProxy;
 use Monolog\Handler\AbstractProcessingHandler;
